@@ -9,6 +9,9 @@
 
 #navbarName {
     color: rgba(255, 0, 0, 0.582);
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+    letter-spacing: 5px;
 }
 
 #main {
