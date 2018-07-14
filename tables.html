@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-md-12">
                 <ol class="list-group" id="resList">
-                    <li class="list-group-item">Mr. A 00:00</li>
+
                 </ol>
             </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-md-12">
                 <ol class="list-group" id="waitList">
-                    <li class="list-group-item">Mr. S 00:00</li>
+
                 </ol>
             </div>
         </div>
@@ -62,7 +62,7 @@
             for (var i = 0; i < data.length; i++) {
 
                 console.log(data);
-                $("#resList").append("<li class='list-group-item'>" + data[i].name + "</li>");
+                $("#resList").append("<li class='list-group-item'>" + data[i].name + " | " + data[i].uniqueID + "</li>");
             }
         });
 
@@ -70,7 +70,7 @@
             for (var j = 0; j < data.length; j++) {
 
                 console.log(data);
-                $("#waitList").append("<li class='list-group-item'>" + data[j].name + "</li>");
+                $("#waitList").append("<li class='list-group-item'>" + data[j].name + " | " + data[j].uniqueID + "</li>");
             }
         });
 
