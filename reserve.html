@@ -48,13 +48,13 @@
                 <label for="ID">ID</label>
                 <input type="number" class="form-control" id="ID">
             </div>
-            <button type="submit">Submit</button>
+            <button id="submit" type="submit">Submit</button>
         </form>
     </div>
 
     <script type="text/javascript">
-        // Question: What does this code do?
         $("#btn-submit").on("click", function (event) {
+            alert("Submitted");
             event.preventDefault();
             var newReservation = {
                 name: $("#name").val().trim(),
@@ -62,11 +62,10 @@
                 email: $("#email").val().trim(),
                 uniqueID: $("#ID").val().trim()
             };
-
-            // Question: What does this code do??
             $.post("/api/reservations", newReservation)
                 .then(function (data) {
                     console.log(data);
+                    alert("Submitting Table");
                 });
         });
     </script>
