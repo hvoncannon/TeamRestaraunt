@@ -3,10 +3,20 @@
 }
 
 .nav-item {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#navbarName {
+    color: rgba(255, 0, 0, 0.582);
 }
 
 #main {
-    padding-top: 10%
+    padding-top: 0;
+}
+
+body {
+    background-image: url("./imagesMS/background.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
 }
