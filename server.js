@@ -33,11 +33,11 @@ app.get("/", function(req, res) {
   });
 
 app.get("/tables", function(req, res) {
-    res.sendFile(path.join(__dirname, "tables.html"))
+    res.sendFile(path.join(__dirname, "tables"))
 });
 
 app.get("/reserve", function(req, res) {
-    res.sendFile(path.join(__dirname, "reserve.html"))
+    res.sendFile(path.join(__dirname, "reserve"))
 });
 
 
@@ -52,11 +52,11 @@ app.post("/api/reservations", function(req, res) {
   
     // Using a RegEx Pattern to remove spaces from newCharacter
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newcharacter.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
+    newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
   
     console.log(newTable);
   
-    characters.push(newTable);
+    reservations.push(newTable);
   
     res.json(newTable);
   });

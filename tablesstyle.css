@@ -1,5 +1,9 @@
+#navbarLogo {
+    height: 25px;
+}
+
 body {
-    background-color: darkred;
+    background-color: darkslategrey;
 }
 
 #data-container {
@@ -7,4 +11,3 @@ body {
     padding: 2%;
     margin-top: 5%;
 }
-
