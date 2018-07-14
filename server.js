@@ -31,3 +31,19 @@ app.get("/api", function(req, res) {
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 })
+
+app.post("/api/reservations", function(req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body-parser middleware
+    var newTable = req.body;
+  
+    // Using a RegEx Pattern to remove spaces from newCharacter
+    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    newcharacter.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
+  
+    console.log(newTable);
+  
+    characters.push(newTable);
+  
+    res.json(newTable);
+  });
