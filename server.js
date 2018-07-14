@@ -68,15 +68,15 @@ app.post("/api/reservations", function(req, res) {
     
     if (reservations.length < 5) {
         reservations.push(newTable);
+        res.send("Your reservation was accepted.")
     }
     
     else {
         waitinglist.push(newTable);
+        res.send("Reservation list full. You were added to the waitlist")
     }
     
   
-    res.json(newTable);
-
     console.log("res length: " + reservations.length);
     console.log("waiting length: " + waitinglist.length);
   });
