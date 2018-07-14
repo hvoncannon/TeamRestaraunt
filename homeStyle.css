@@ -20,3 +20,14 @@ body {
     background-repeat: no-repeat;
     background-size: auto;
 }
+
+h5 {
+    font-size: 30px;
+    margin-bottom: 25%;
+    font-family: 'Abril Fatface', cursive;
+
+}
+
+#slide2font {
+    color: black;
+}
