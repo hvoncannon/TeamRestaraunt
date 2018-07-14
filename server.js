@@ -32,12 +32,16 @@ var waitinglist = [
 
 
 
-//shows all reservations
-app.get("/api", function(req, res) {
+//API routes for getting reserbations & waiting list
+app.get("/api/reservations", function(req, res) {
     return res.json(reservations);
 });
 
-//
+app.get("/api/waitinglist", function(req, res) {
+    return res.json(reservations);
+});
+
+//routes for loading pages
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "home.html"));
   });
