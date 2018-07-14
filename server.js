@@ -38,7 +38,7 @@ app.get("/api/reservations", function(req, res) {
 });
 
 app.get("/api/waitinglist", function(req, res) {
-    return res.json(reservations);
+    return res.json(waitinglist);
 });
 
 //routes for loading pages
