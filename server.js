@@ -43,9 +43,6 @@ app.get("/reserve", function(req, res) {
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-<<<<<<< HEAD
-});
-=======
 })
 
 app.post("/api/reservations", function(req, res) {
@@ -63,4 +60,3 @@ app.post("/api/reservations", function(req, res) {
   
     res.json(newTable);
   });
->>>>>>> 9f60dcfbad1ac7423adba67ea0d71e9730a6f447
