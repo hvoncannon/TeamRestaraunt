@@ -1,0 +1,9 @@
+body {
+    background-color: darkred;
+}
+
+#data-container {
+    background-color: darkgray;
+    padding: 2%;
+    margin-top: 5%;
+}
