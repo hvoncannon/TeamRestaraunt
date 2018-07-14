@@ -53,8 +53,7 @@
     </div>
 
     <script type="text/javascript">
-        $("#btn-submit").on("click", function (event) {
-            alert("Submitted");
+        $("#submit").on("click", function (event) {
             event.preventDefault();
             var newReservation = {
                 name: $("#name").val().trim(),
