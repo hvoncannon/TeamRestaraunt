@@ -19,7 +19,17 @@ var reservations = [
         email: "hayden@gmail.com",
         uniqueID: "rte89"
     }
-]
+];
+
+var waitinglist = [
+    {
+        name: "testWait",
+        phoneNumber: 9499999999,
+        email: "hayden@gmail.com",
+        uniqueID: "rte8253439"
+    }
+];
+
 
 
 //shows all reservations
@@ -43,7 +53,7 @@ app.get("/reserve", function(req, res) {
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-})
+});
 
 app.post("/api/reservations", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
@@ -52,11 +62,21 @@ app.post("/api/reservations", function(req, res) {
   
     // Using a RegEx Pattern to remove spaces from newCharacter
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newcharacter.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
+    newTable.uniqueID = newTable.uniqueID.replace(/\s+/g, "").toLowerCase();
   
     console.log(newTable);
-  
-    characters.push(newTable);
+    
+    if (reservations.length < 5) {
+        reservations.push(newTable);
+    }
+    
+    else {
+        waitinglist.push(newTable);
+    }
+    
   
     res.json(newTable);
+
+    console.log("res length: " + reservations.length);
+    console.log("waiting length: " + waitinglist.length);
   });
