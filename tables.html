@@ -59,12 +59,21 @@
     <script type="text/javascript">
 
         $.get("/api/reservations", function (data) {
-            for (var i = 0; i < reservations.length; i++) {
+            for (var i = 0; i < data.length; i++) {
 
                 console.log(data);
-                $("#resList").append("<li class='list-group-item'>" + data.name + "</li>");
+                $("#resList").append("<li class='list-group-item'>" + data[i].name + "</li>");
             }
         });
+
+        $.get("/api/waitinglist", function (data) {
+            for (var j = 0; j < data.length; j++) {
+
+                console.log(data);
+                $("#waitList").append("<li class='list-group-item'>" + data[j].name + "</li>");
+            }
+        });
+
 
 
 
